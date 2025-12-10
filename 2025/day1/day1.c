@@ -10,7 +10,7 @@ int main() {
     distance = distance - (distance / 100) * 100;
     switch (rotation) {
       case 'L':
-        dial = (dial - distance < 0) ? 100 - (distance - dial) : dial - distance;
+        dial = (distance > dial) ? 100 - (distance - dial) : dial - distance;
         break;
       case 'R':
         dial = (dial + distance) % 100;
