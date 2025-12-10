@@ -13,7 +13,7 @@ int main() {
         dial = (dial - distance < 0) ? 100 - (distance - dial) : dial - distance;
         break;
       case 'R':
-        dial = (dial + distance > 99) ? (dial - 100 + distance) : dial + distance;
+        dial = (dial + distance) % 100;
         break;
       default:
         printf("error in switch");
