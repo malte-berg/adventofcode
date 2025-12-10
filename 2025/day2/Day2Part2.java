@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Day2Part2 {
 
   public static void main(String[] args) {
+    
     File inputFile = new File("input.txt");
 
     try {
+
       Scanner fileReader = new Scanner(inputFile);
 
       String input = fileReader.nextLine();
@@ -29,14 +31,17 @@ public class Day2Part2 {
 
             if (length % sub != 0) continue;
 
-            String substring = s.substring(0, sub);
-            String regex = "(?i)".concat(substring);
-            String replaced = s.replaceAll(regex, "");
+              String substring = s.substring(0, sub);
+              String regex = "(?i)".concat(substring);
+              String replaced = s.replaceAll(regex, "");
 
             if (replaced.length() == 0) {
+
               sum += i;
               break;
+
             }
+
           }
 
         }
@@ -46,7 +51,9 @@ public class Day2Part2 {
       System.out.println("Total sum: " + sum);
 
     } catch (FileNotFoundException e) {
+
       System.out.println("error");
+
     }
 
   }

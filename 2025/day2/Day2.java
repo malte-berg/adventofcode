@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class Day2 {
 
   public static void main(String[] args) {
+
     File inputFile = new File("input.txt");
 
     try {
+
       Scanner fileReader = new Scanner(inputFile);
 
       String input = fileReader.nextLine();
@@ -37,7 +39,9 @@ public class Day2 {
       System.out.println("Total sum: " + sum);
 
     } catch (FileNotFoundException e) {
+
       System.out.println("error");
+
     }
 
   }
